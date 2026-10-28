@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Pro – أدوات PDF المتكاملة</title>
+  <meta name="description" content="مجموعة شاملة من أدوات PDF المجانية – دمج، تقسيم، ضغط، تحويل، تعديل وحماية ملفاتك بسهولة تامة." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="logo-link">
+        <span class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+            <path d="M10 8h14l8 8v16H10V8z" fill="white" opacity="0.9"/>
+            <path d="M24 8l8 8h-8V8z" fill="white" opacity="0.5"/>
+            <text x="13" y="26" font-size="8" fill="#e53e3e" font-weight="bold" font-family="Arial">PDF</text>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#ff416c"/>
+                <stop offset="100%" stop-color="#ff4b2b"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">PDF <span class="logo-pro">Pro</span></span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#tools" class="nav-link" id="nav-tools">الأدوات</a>
+        <a href="#features" class="nav-link" id="nav-features">المميزات</a>
+        <a href="#how" class="nav-link" id="nav-how">كيف تعمل</a>
+        <a href="#faq" class="nav-link" id="nav-faq">الأسئلة</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#" class="btn-outline" id="btn-login">تسجيل الدخول</a>
+        <a href="#" class="btn-primary" id="btn-free">ابدأ مجاناً</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ أكثر من 20 أداة مجانية</div>
+      <h1 class="hero-title">
+        كل ما تحتاجه<br/>
+        لملفات <span class="gradient-text">PDF</span>
+      </h1>
+      <p class="hero-subtitle">
+        دمج، تقسيم، ضغط، تحويل، تعديل وحماية ملفاتك بسهولة تامة ومجاناً.
+        <br/>لا حاجة لتثبيت أي برنامج.
+      </p>
+      <div class="hero-actions">
+        <a href="#tools" class="btn-hero-primary" id="btn-explore">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          استكشف الأدوات
+        </a>
+        <a href="#how" class="btn-hero-outline" id="btn-howworks">كيف تعمل؟</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">أداة مجانية</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">آمن وخاص</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">ملفات غير محدودة</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-cards">
+        <div class="f-card f1" id="fcard-1">
+          <div class="f-card-icon" style="background:linear-gradient(135deg,#ff416c,#ff4b2b)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <span>دمج PDF</span>
+        </div>
+        <div class="f-card f2" id="fcard-2">
+          <div class="f-card-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <span>تقسيم PDF</span>
+        </div>
+        <div class="f-card f3" id="fcard-3">
+          <div class="f-card-icon" style="background:linear-gradient(135deg,#11998e,#38ef7d)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span>ضغط PDF</span>
+        </div>
+        <div class="f-card f4" id="fcard-4">
+          <div class="f-card-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span>تحويل PDF</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOOLS SECTION ===== -->
+  <section class="tools-section" id="tools">
+    <div class="section-header">
+      <div class="section-badge">الأدوات</div>
+      <h2 class="section-title">جميع أدوات PDF في مكان واحد</h2>
+      <p class="section-subtitle">اختر من بين مجموعة شاملة من الأدوات المجانية لإدارة ملفات PDF</p>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-wrap">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="ابحث عن أداة..." autocomplete="off" />
+      </div>
+    </div>
+
+    <!-- CATEGORY FILTERS -->
+    <div class="cat-filters" id="catFilters">
+      <button class="cat-btn active" data-cat="all" id="cat-all">الكل</button>
+      <button class="cat-btn" data-cat="organize" id="cat-organize">تنظيم</button>
+      <button class="cat-btn" data-cat="improve" id="cat-improve">تحسين</button>
+      <button class="cat-btn" data-cat="to-pdf" id="cat-topdf">تحويل إلى PDF</button>
+      <button class="cat-btn" data-cat="from-pdf" id="cat-frompdf">تحويل من PDF</button>
+      <button class="cat-btn" data-cat="edit" id="cat-edit">تعديل</button>
+      <button class="cat-btn" data-cat="protect" id="cat-protect">حماية</button>
+      <button class="cat-btn" data-cat="info" id="cat-info">معلومات</button>
+    </div>
+
+    <!-- TOOLS GRID -->
+    <div class="tools-grid" id="toolsGrid">
+
+      <!-- ORGANIZE -->
+      <div class="category-block" data-cat="organize" id="block-organize">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#667eea22,#764ba222)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>تنظيم ملف PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="merge" id="tool-merge" onclick="openTool('دمج PDF','merge')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#ff416c,#ff4b2b)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M8 6H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-3M12 2v12M8 10l4 4 4-4"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">دمج PDF</span><span class="tool-desc">ادمج ملفات PDF متعددة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="split" id="tool-split" onclick="openTool('تقسيم PDF','split')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#764ba2,#667eea)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تقسيم PDF</span><span class="tool-desc">قسّم PDF إلى أجزاء</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="remove-pages" id="tool-remove-pages" onclick="openTool('حذف الصفحات','remove-pages')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f5576c,#f093fb)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">حذف الصفحات</span><span class="tool-desc">احذف صفحات معينة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="extract-pages" id="tool-extract-pages" onclick="openTool('استخراج الصفحات','extract-pages')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">استخراج الصفحات</span><span class="tool-desc">استخرج صفحات محددة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="organize-pdf" id="tool-organize-pdf" onclick="openTool('تنظيم ملف PDF','organize-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تنظيم ملف PDF</span><span class="tool-desc">رتّب الصفحات بسهولة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="scan" id="tool-scan" onclick="openTool('امسح إلى PDF','scan')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#fa709a,#fee140)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v6"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">امسح إلى PDF</span><span class="tool-desc">حوّل صورة إلى PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMPROVE -->
+      <div class="category-block" data-cat="improve" id="block-improve">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#11998e22,#38ef7d22)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#11998e" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>تحسين مستند PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="compress" id="tool-compress" onclick="openTool('ضغط PDF','compress')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="21" y2="3"/><line x1="3" y1="21" x2="14" y2="10"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">ضغط PDF</span><span class="tool-desc">قلّل حجم الملف</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="repair" id="tool-repair" onclick="openTool('إصلاح مستند PDF','repair')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">إصلاح مستند PDF</span><span class="tool-desc">أصلح ملفات PDF التالفة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="ocr" id="tool-ocr" onclick="openTool('تعرف ضوئي على الحروف','ocr')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تعرف ضوئي (OCR)</span><span class="tool-desc">استخرج النص من الصور</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONVERT TO PDF -->
+      <div class="category-block" data-cat="to-pdf" id="block-topdf">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#f7971e22,#ffd20022)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f7971e" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+          </div>
+          <h3>تحويل إلى PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="jpg-to-pdf" id="tool-jpg-to-pdf" onclick="openTool('JPG إلى PDF','jpg-to-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#ff9a56,#ff6a00)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">JPG إلى PDF</span><span class="tool-desc">حوّل صور JPG إلى PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="word-to-pdf" id="tool-word-to-pdf" onclick="openTool('WORD إلى PDF','word-to-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#2b6cb0,#4299e1)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">WORD إلى PDF</span><span class="tool-desc">حوّل Word إلى PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="ppt-to-pdf" id="tool-ppt-to-pdf" onclick="openTool('PowerPoint إلى PDF','ppt-to-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#c53030,#fc8181)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PowerPoint إلى PDF</span><span class="tool-desc">حوّل PPTX إلى PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="excel-to-pdf" id="tool-excel-to-pdf" onclick="openTool('Excel إلى PDF','excel-to-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#276749,#68d391)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">Excel إلى PDF</span><span class="tool-desc">حوّل جداول Excel إلى PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdfa-to-pdf" id="tool-pdfa-to-pdf" onclick="openTool('PDF/A إلى PDF','pdfa-to-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#553c9a,#b794f4)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF/A إلى PDF</span><span class="tool-desc">حوّل PDF/A إلى PDF عادي</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONVERT FROM PDF -->
+      <div class="category-block" data-cat="from-pdf" id="block-frompdf">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#4facfe22,#00f2fe22)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4facfe" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </div>
+          <h3>التحويل من PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="pdf-to-jpg" id="tool-pdf-to-jpg" onclick="openTool('PDF إلى JPG','pdf-to-jpg')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#ff9a56,#ff6a00)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى JPG</span><span class="tool-desc">حوّل PDF إلى صور</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdf-to-word" id="tool-pdf-to-word" onclick="openTool('PDF إلى Word','pdf-to-word')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#2b6cb0,#4299e1)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى Word</span><span class="tool-desc">حوّل PDF إلى DOCX</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdf-to-ppt" id="tool-pdf-to-ppt" onclick="openTool('PDF إلى PowerPoint','pdf-to-ppt')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#c53030,#fc8181)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى PowerPoint</span><span class="tool-desc">حوّل PDF إلى PPTX</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdf-to-excel" id="tool-pdf-to-excel" onclick="openTool('PDF إلى Excel','pdf-to-excel')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#276749,#68d391)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى Excel</span><span class="tool-desc">حوّل PDF إلى جداول</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdf-to-html" id="tool-pdf-to-html" onclick="openTool('PDF إلى HTML','pdf-to-html')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#e67e22,#f39c12)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى HTML</span><span class="tool-desc">حوّل PDF إلى صفحة ويب</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDIT -->
+      <div class="category-block" data-cat="edit" id="block-edit">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#fa709a22,#fee14022)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fa709a" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>تعديل ملف PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="rotate" id="tool-rotate" onclick="openTool('تدوير ملفات PDF','rotate')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تدوير ملفات PDF</span><span class="tool-desc">دوّر الصفحات بزوايا مختلفة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="add-pages" id="tool-add-pages" onclick="openTool('إضافة أرقام الصفحات','add-pages')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">إضافة أرقام الصفحات</span><span class="tool-desc">أضف ترقيم للصفحات</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="watermark" id="tool-watermark" onclick="openTool('إضافة العلامة المائية','watermark')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">إضافة العلامة المائية</span><span class="tool-desc">أضف علامة مائية للـ PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="crop" id="tool-crop" onclick="openTool('قص ملفات PDF','crop')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="6.13 1 6 16a2 2 0 002 2h15"/><path d="M1 6.13l15-.13a2 2 0 012 2v15"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">قص ملفات PDF</span><span class="tool-desc">قص وهامش الصفحات</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="edit-pdf" id="tool-edit-pdf" onclick="openTool('تعديل ملف PDF','edit-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تعديل ملف PDF</span><span class="tool-desc">عدّل النصوص والصور</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="forms" id="tool-forms" onclick="openTool('نماذج PDF','forms')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">نماذج PDF</span><span class="tool-desc">أنشئ وعبّئ النماذج</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROTECT -->
+      <div class="category-block" data-cat="protect" id="block-protect">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#ff416c22,#ff4b2b22)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff416c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>حماية ملف PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="open-pdf" id="tool-open-pdf" onclick="openTool('فتح ملفات PDF','open-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">فتح ملفات PDF</span><span class="tool-desc">افتح ملفات PDF المحمية</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="protect-pdf" id="tool-protect-pdf" onclick="openTool('حماية ملف PDF','protect-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#ff416c,#ff4b2b)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">حماية ملف PDF</span><span class="tool-desc">أضف كلمة مرور للملف</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="sign-pdf" id="tool-sign-pdf" onclick="openTool('توقيع مستند PDF','sign-pdf')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#764ba2,#667eea)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 19.5v.5a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2h8.5L18 5.5"/><path d="M8 18h1l12.5-12.5L20 4 7.5 16.5 8 18z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">توقيع مستند PDF</span><span class="tool-desc">وقّع ملفات PDF إلكترونياً</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="redact" id="tool-redact" onclick="openTool('تنقيح PDF','redact')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#1a202c,#4a5568)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="6" width="18" height="3" rx="1"/><rect x="3" y="11" width="12" height="3" rx="1"/><rect x="3" y="16" width="15" height="3" rx="1"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">تنقيح PDF</span><span class="tool-desc">أخفِ المعلومات الحساسة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="compare" id="tool-compare" onclick="openTool('مقارنة ملفات PDF','compare')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M10 3H6a2 2 0 00-2 2v14a2 2 0 002 2h4M16 3h2a2 2 0 012 2v14a2 2 0 01-2 2h-2M7 12h10"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">مقارنة ملفات PDF</span><span class="tool-desc">قارن بين ملفين PDF</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="category-block" data-cat="info" id="block-info">
+        <div class="cat-header">
+          <div class="cat-icon-wrap" style="background:linear-gradient(135deg,#667eea22,#764ba222)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <h3>معلومات PDF</h3>
+        </div>
+        <div class="tools-list">
+          <div class="tool-card" data-tool="summary" id="tool-summary" onclick="openTool('الملخص الذكي','summary')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">الملخص الذكي</span><span class="tool-desc">لخّص المستند بالذكاء الاصطناعي</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="translate" id="tool-translate" onclick="openTool('ترجمة ملف PDF','translate')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">ترجمة ملف PDF</span><span class="tool-desc">ترجم المستند بأي لغة</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+          <div class="tool-card" data-tool="pdf-to-md" id="tool-pdf-to-md" onclick="openTool('PDF إلى Markdown','pdf-to-md')">
+            <div class="tool-icon" style="background:linear-gradient(135deg,#1a202c,#2d3748)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+            </div>
+            <div class="tool-info"><span class="tool-name">PDF إلى Markdown</span><span class="tool-desc">حوّل PDF إلى Markdown</span></div>
+            <div class="tool-arrow">&#8592;</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <div class="section-badge">لماذا نحن؟</div>
+      <h2 class="section-title">لماذا تختار PDF Pro؟</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" id="feat-1">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#ff416c,#ff4b2b)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>سريع جداً</h3>
+        <p>معالجة فورية للملفات في ثوانٍ معدودة بتقنية الحوسبة السحابية</p>
+      </div>
+      <div class="feature-card" id="feat-2">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>آمن وخاص</h3>
+        <p>ملفاتك محمية بتشفير SSL وتُحذف تلقائياً بعد المعالجة</p>
+      </div>
+      <div class="feature-card" id="feat-3">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>مجاني تماماً</h3>
+        <p>جميع الأدوات الأساسية مجانية بدون تسجيل أو اشتراك</p>
+      </div>
+      <div class="feature-card" id="feat-4">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>يعمل على كل جهاز</h3>
+        <p>متوافق مع جميع الأجهزة: كمبيوتر، تابلت، وموبايل</p>
+      </div>
+      <div class="feature-card" id="feat-5">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3>دعم متعدد اللغات</h3>
+        <p>واجهة عربية كاملة مع دعم لأكثر من 50 لغة عالمية</p>
+      </div>
+      <div class="feature-card" id="feat-6">
+        <div class="feat-icon" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>ذكاء اصطناعي</h3>
+        <p>أدوات مدعومة بالذكاء الاصطناعي للتلخيص والترجمة والمزيد</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="section-header">
+      <div class="section-badge">الطريقة</div>
+      <h2 class="section-title">كيف تعمل؟</h2>
+      <p class="section-subtitle">ثلاث خطوات بسيطة وملفك جاهز</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-card" id="step-1">
+        <div class="step-num">١</div>
+        <div class="step-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        </div>
+        <h3>ارفع ملفك</h3>
+        <p>اسحب وأفلت ملف PDF أو اختره من جهازك أو السحابة</p>
+      </div>
+      <div class="step-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff416c" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="step-card" id="step-2">
+        <div class="step-num">٢</div>
+        <div class="step-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>اختر الأداة</h3>
+        <p>اختر العملية المطلوبة وخصّصها حسب احتياجاتك</p>
+      </div>
+      <div class="step-arrow">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff416c" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="step-card" id="step-3">
+        <div class="step-num">٣</div>
+        <div class="step-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </div>
+        <h3>حمّل النتيجة</h3>
+        <p>حمّل الملف المعالج فوراً أو احفظه في السحابة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-header">
+      <div class="section-badge">الأسئلة الشائعة</div>
+      <h2 class="section-title">أسئلة وأجوبة</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item" id="faq-1">
+        <button class="faq-q" onclick="toggleFaq('faq-1')">
+          <span>هل الأدوات مجانية تماماً؟</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">نعم، جميع الأدوات الأساسية مجانية بالكامل دون الحاجة لتسجيل أو اشتراك. نوفر أيضاً خطة مدفوعة للميزات المتقدمة.</div>
+      </div>
+      <div class="faq-item" id="faq-2">
+        <button class="faq-q" onclick="toggleFaq('faq-2')">
+          <span>هل ملفاتي آمنة؟</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">ملفاتك محمية بتشفير SSL-256 بت، ويتم حذفها تلقائياً بعد ساعة من معالجتها. نحن لا نطّلع على محتوى ملفاتك.</div>
+      </div>
+      <div class="faq-item" id="faq-3">
+        <button class="faq-q" onclick="toggleFaq('faq-3')">
+          <span>ما هو الحجم الأقصى للملف؟</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">يمكنك رفع ملفات حتى 100 ميجابايت مجاناً. مع الخطة المدفوعة ترتفع الحدود إلى 2 جيجابايت.</div>
+      </div>
+      <div class="faq-item" id="faq-4">
+        <button class="faq-q" onclick="toggleFaq('faq-4')">
+          <span>هل تعمل الأدوات على الموبايل؟</span>
+          <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">نعم، الموقع متجاوب بالكامل ويعمل على جميع الأجهزة: الكمبيوتر، التابلت، والموبايل بدون أي تنزيل.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-bg"></div>
+    <div class="cta-content">
+      <h2>ابدأ الآن مجاناً</h2>
+      <p>انضم إلى ملايين المستخدمين الذين يثقون في PDF Pro لإدارة ملفاتهم</p>
+      <div class="cta-actions">
+        <a href="#tools" class="btn-hero-primary" id="cta-start">ابدأ الآن مجاناً</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-text" style="font-size:1.5rem">PDF <span class="logo-pro">Pro</span></span>
+        <p>أدوات PDF المتكاملة – سريعة، آمنة، ومجانية</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>الأدوات</h4>
+        <a href="#">دمج PDF</a>
+        <a href="#">ضغط PDF</a>
+        <a href="#">تحويل PDF</a>
+        <a href="#">تقسيم PDF</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>الشركة</h4>
+        <a href="#">عن المنصة</a>
+        <a href="#">المدونة</a>
+        <a href="#">تواصل معنا</a>
+        <a href="#">الخصوصية</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&#169; 2026 PDF Pro &#8211; جميع الحقوق محفوظة</span>
+    </div>
+  </footer>
+
+  <!-- TOOL MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="toolModal" onclick="event.stopPropagation()">
+      <button class="modal-close" id="modalClose" onclick="closeModal()">&#10005;</button>
+      <div class="modal-icon" id="modalIcon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+      </div>
+      <h2 id="modalTitle">اسم الأداة</h2>
+      <p id="modalDesc">ارفع ملف PDF لبدء المعالجة</p>
+      <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+        <div class="drop-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff416c" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        </div>
+        <p class="drop-text">اسحب وأفلت ملف PDF هنا</p>
+        <p class="drop-sub">أو انقر للاختيار من جهازك</p>
+        <input type="file" id="fileInput" accept=".pdf" hidden onchange="handleFile(event)"/>
+      </div>
+      <div class="modal-file-info" id="fileInfo" style="display:none"></div>
+      <button class="btn-modal-primary" id="btnProcess" style="display:none" onclick="processFile()">
+        <span id="btnProcessText">معالجة الملف</span>
+        <div class="btn-spinner" id="btnSpinner" style="display:none"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
